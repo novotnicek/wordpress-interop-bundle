@@ -15,7 +15,7 @@ final class EntityManagerFactory
         Connection $connection,
         SerializerInterface $serializer,
         string $tablePrefix = 'wp_',
-        DuplicationServiceInterface $duplicationService = null,
+        ?DuplicationServiceInterface $duplicationService = null,
     ): EntityManagerInterface {
         return new EntityManager($connection, $serializer, $tablePrefix, $duplicationService);
     }
